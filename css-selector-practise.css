@@ -1,0 +1,58 @@
+p :first-child {
+    color: red
+}
+p.a:active {
+    color: red
+}
+p.a:hover {
+    color: green
+}
+p.a:focus {
+    color: blue
+}
+p[class="a c"] span {
+    color: red
+}
+p[class="a c"] span :first-child {
+    color: greenyellow
+}
+p[class="a c"] span :last-child {
+    color: mediumblue
+}
+a:visited {
+    color: orange
+}
+a[href$="com/"]:visited {
+    color: orange
+}
+a[href$="com/"]:link {
+    color: pink
+}
+a[href$="com"] {
+    color: blue
+}
+a[href^="tel"] {
+    color: yellow
+}
+a[href$=".pdf" i] {
+    font-size: 30px
+}
+div.b ul li:nth-child(-n+25) {
+    color: red
+}
+div.b ul li:nth-child(n+65) {
+    color: green
+}
+div.b ul li:nth-child(n+35):nth-child(-n+50) {
+    color: blue
+}
+div.prime ul li {
+    color: red;
+  }
+  li:first-child,
+  li:nth-child(2n + 4),
+  li:nth-child(3n + 6),
+  li:nth-child(5n + 10),
+  li:nth-child(7n + 14) {
+    color: grey;
+  }
