@@ -46,13 +46,13 @@ div.b ul li:nth-child(n+65) {
 div.b ul li:nth-child(n+35):nth-child(-n+50) {
     color: blue
 }
-div.prime ul li {
+.prime ul li {
     color: red;
   }
-  li:first-child,
-  li:nth-child(2n + 4),
-  li:nth-child(3n + 6),
-  li:nth-child(5n + 10),
-  li:nth-child(7n + 14) {
+.prime ul li:first-child,
+.prime ul li:nth-child(2n + 4),
+.prime ul li:nth-child(3n + 6),
+.prime ul li:nth-child(5n + 10),
+.prime ul li:nth-child(7n + 14) {
     color: grey;
   }
