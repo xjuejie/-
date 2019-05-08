@@ -1,15 +1,16 @@
-p :first-child {
+body>p:first-child {
     color: red
-}
-p.a:active {
-    color: red
-}
-p.a:hover {
-    color: green
 }
 p.a:focus {
     color: blue
 }
+p.a:hover {
+    color: red
+}
+p.a:active {
+    color: green
+}
+
 p[class="a c"] span {
     color: red
 }
