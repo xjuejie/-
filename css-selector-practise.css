@@ -50,7 +50,9 @@ div.b ul li:nth-child(n+35):nth-child(-n+50) {
 .prime ul li {
     color: red;
   }
-.prime ul li:first-child,
+.prime ul li:first-child {
+    color: black
+}
 .prime ul li:nth-child(2n + 4),
 .prime ul li:nth-child(3n + 6),
 .prime ul li:nth-child(5n + 10),
