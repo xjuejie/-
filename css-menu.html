@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Css-Menu.html</title>
+    <style type="text/css">
+     nav{
+        
+     }    
+     li:hover{
+        background-color:orangered;
+     }  
+     li{
+        padding: 5px;
+        }
+     li::after {
+         content:">";
+     }
+     .t1 >li::after{
+         content: "↓"
+     }
+     .t1 > li{
+         float: left
+     }
+     .t1 > li >ul{
+         position: absolute;
+         top: 100%;
+         left: 0;
+     }
+     ul{
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        background-color: rgb(100, 100, 100);
+        border: 3px solid slategrey;
+        }
+    ul li {
+        position: relative;
+        white-space: nowrap;
+        }
+    li:hover > ul{
+        xdisplay: block;
+        opacity: 1;
+        pointer-events:auto;
+        }
+
+    ul ul {
+        opacity: 0;
+        pointer-events: none;
+        xdisplay: none;
+        position: absolute;
+        transition: opacity 0.6s;
+        top: 0%;
+        left: 100%;
+        }
+            
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="t1">
+            <li>文件(F)
+                <ul>
+                    <li>新建
+                        <ul>
+                            <li>一一一一</li>
+                            <li>一一一一</li>
+                            <li>一一一一</li>
+                        </ul>
+                    </li>
+                    <li>保存
+                        <ul>
+                            <li>二二二二</li>
+                            <li>二二二二</li>
+                            <li>二二二二</li>
+                        </ul>
+                    </li>
+                    <li>另存为
+                        <ul>
+                            <li>三三三三</li>
+                            <li>三三三三</li>
+                            <li>三三三三</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>编辑(E)
+                <ul>
+                    <li>剪切
+                        <ul>
+                            <li>四四四四</li>
+                            <li>四四四四</li>
+                            <li>四四四四</li>
+                        </ul>
+                    </li>
+                    <li>复制
+                        <ul>
+                            <li>五五五五</li>
+                            <li>五五五五</li>
+                            <li>五五五五</li>
+                        </ul>
+                    </li>
+                    <li>粘贴
+                        <ul>
+                            <li>六六六六</li>
+                            <li>六六六六</li>
+                            <li>六六六六</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>选择(S)
+                <ul>
+                    <li>全选
+                        <ul>
+                            <li>七七七七</li>
+                            <li>七七七七</li>
+                            <li>七七七七</li>
+                        </ul>
+                    </li>
+                    <li>展开选定内容
+                        <ul>
+                            <li>八八八八</li>
+                            <li>八八八八</li>
+                            <li>八八八八</li>
+                        </ul>
+                    </li>
+                    <li>缩小选定范围
+                        <ul>
+                            <li>九九九九</li>
+                            <li>九九九九</li>
+                            <li>九九九九</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>查看(V)
+                <ul>
+                    <li>命令面板
+                        <ul>
+                            <li>十十十十</li>
+                            <li>十十十十</li>
+                            <li>十十十十</li>
+                        </ul>
+                    </li>
+                    <li>打开视图
+                        <ul>
+                            <li>十一十一</li>
+                            <li>十一十一</li>
+                            <li>十一十一</li>
+                        </ul>
+                    </li>
+                    <li>外观
+                        <ul>
+                            <li>十二十二</li>
+                            <li>十二十二</li>
+                            <li>十二十二</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>转到(G)
+                <ul>
+                    <li>返回
+                         <ul>
+                            <li>十三十三</li>
+                            <li>十三十三</li>
+                            <li>十三十三</li>
+                        </ul>
+                    </li>
+                    <li>前进
+                         <ul>
+                            <li>十四十四</li>
+                            <li>十四十四</li>
+                            <li>十四十四</li>
+                        </ul>
+                    </li>
+                    <li>上次编辑位置
+                         <ul>
+                            <li>十五十五</li>
+                            <li>十五十五</li>
+                            <li>十五十五</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

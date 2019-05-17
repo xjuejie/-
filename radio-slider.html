@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>radio-slider</title>
+    <style type="text/css">
+     div.xm{
+        position: relative;
+        /* width: 150px;
+        height: 20px;
+        left: 350px; */
+    } 
+    input{
+        display: none;
+    }
+    img{
+        /* display: none; */
+        opacity: 0;
+        width: 950px;
+        height: 460px;
+        position:absolute;
+        top: 0;
+        left: 0;
+        transition: all 1s;
+
+    }
+    .chang{
+        opacity: 1;
+
+
+    }
+    .xm input:checked + img{
+        /* display: block */
+        opacity: 1;
+    }
+    .slider{
+        width: 150px;
+        height: 5px;
+        position:relative;
+        top: 100px;
+    }
+    .slider label{
+        display: block;
+        float: left;
+        width:5px;
+        height: 5px;
+        margin: 5px;
+        border: 2px solid rgb(150,150,150);
+        position: relative;
+        z-index: 5;
+        border-radius: 100px;
+        top: 340px;
+        left: 800px;
+        background:rgb(100, 100, 100)
+    }
+   input:checked l{
+        background: #fff;
+    }
+    label:hover{
+        background: white;
+    }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="xm">
+     
+    
+        <input type="radio" name="mi" id="i1">
+        <img class="chang" src="https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg" alt="">
+        <input type="radio" name="mi" id="i2">
+        <img src="https://i1.mifile.cn/a4/xmad_15529884424562_HKYaG.jpg" alt="">
+        <input type="radio" name="mi" id="i3">
+        <img src="https://i1.mifile.cn/a4/xmad_15579184778872_ECdvK.jpg" alt="">
+        <input type="radio" name="mi" id="i4">
+        <img src="https://i1.mifile.cn/a4/xmad_15548066591437_Stxlj.jpg" alt="">
+        <input type="radio" name="mi" id="i5">
+        <img src="https://i1.mifile.cn/a4/xmad_15476942061027_STEvM.jpg" alt="">
+        <div class="slider">
+                <label for="i1"></label>
+                <label for="i2"></label>
+                <label for="i3"></label>
+                <label for="i4"></label>
+                <label for="i5"></label>
+        
+              </div>
+    </div>
+</body>
+</html>

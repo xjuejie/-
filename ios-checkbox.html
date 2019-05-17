@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    input{
+        display: none;
+    }
+    label{
+        display: block;
+        width: 56px;
+        height: 34px;
+        box-sizing: border-box;
+        border-radius: 50px;
+        border: 1px solid rgb(221,221,221);
+        transition:  all 0.13s;
+        /* position: relative; */
+    }
+
+    label::before{
+        display: block;
+        content: " ";
+        width:30px;
+        height: 30px;
+        background: #fff;
+        border-radius: 9999px;
+        border: 1px solid rgb(221,221,221);
+        position:absolute;
+        left: 8px;
+        top: 9px;
+        padding: 0;
+        transition:  all 0.2s;
+        z-index:1;
+        box-shadow: 0px 1px 2px rgb(111,111,111);
+    }
+   input:checked + label::before{
+       left: 30px;
+       border: 1px solid rgb(255,255,255);
+       z-index: 5;
+      
+       /* transition:  all 0.3s; */
+
+   }
+   input:checked + label{
+       box-sizing: border-box;
+       border: 17px solid rgb(75, 237, 144);
+   }
+    
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="ios">
+    <label class="a" for="ios"></label>
+    
+</body>
+</html>
