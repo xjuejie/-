@@ -30,32 +30,33 @@
         opacity: 1;
 
 
+
     }
     .xm input:checked + img{
         /* display: block */
         opacity: 1;
     }
-    .slider{
+    /* .slider{
         width: 150px;
         height: 5px;
         position:relative;
         top: 100px;
-    }
-    .slider label{
-        display: block;
-        float: left;
-        width:5px;
-        height: 5px;
+    } */
+    label{
+        display:block;
+       float: left; 
+        width:8px;
+        height: 8px;
         margin: 5px;
         border: 2px solid rgb(150,150,150);
         position: relative;
         z-index: 5;
         border-radius: 100px;
-        top: 340px;
+        top: 430px;
         left: 800px;
         background:rgb(100, 100, 100)
     }
-   input:checked l{
+   input:checked + img + label{
         background: #fff;
     }
     label:hover{
@@ -73,22 +74,27 @@
     
         <input type="radio" name="mi" id="i1">
         <img class="chang" src="https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg" alt="">
+        <label for="i1" class="chang"></label>
         <input type="radio" name="mi" id="i2">
         <img src="https://i1.mifile.cn/a4/xmad_15529884424562_HKYaG.jpg" alt="">
+        <label for="i2"></label>
         <input type="radio" name="mi" id="i3">
         <img src="https://i1.mifile.cn/a4/xmad_15579184778872_ECdvK.jpg" alt="">
+        <label for="i3"></label>
         <input type="radio" name="mi" id="i4">
         <img src="https://i1.mifile.cn/a4/xmad_15548066591437_Stxlj.jpg" alt="">
+        <label for="i4"></label>
         <input type="radio" name="mi" id="i5">
         <img src="https://i1.mifile.cn/a4/xmad_15476942061027_STEvM.jpg" alt="">
-        <div class="slider">
-                <label for="i1"></label>
-                <label for="i2"></label>
-                <label for="i3"></label>
-                <label for="i4"></label>
-                <label for="i5"></label>
+        <label for="i5"></label>
+       
+                
+                
+               
+               
+              
         
-              </div>
+           
     </div>
 </body>
 </html>
