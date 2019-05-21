@@ -26,12 +26,12 @@
         transition: all 1s;
 
     }
-    .chang{
+    /* .chang{
         opacity: 1;
 
 
 
-    }
+    } */
     .xm input:checked + img{
         /* display: block */
         opacity: 1;
@@ -42,26 +42,60 @@
         position:relative;
         top: 100px;
     } */
-    label{
+    .xm > label{
         display:block;
-       float: left; 
+        float: left; 
         width:8px;
         height: 8px;
         margin: 5px;
-        border: 2px solid rgb(150,150,150);
+        border: 2px solid rgba(150,150,150,0.2);
         position: relative;
         z-index: 5;
         border-radius: 100px;
         top: 430px;
         left: 800px;
-        background:rgb(100, 100, 100)
+        background:rgba(100, 100, 100,0.3)
     }
    input:checked + img + label{
         background: #fff;
     }
     label:hover{
-        background: white;
+        background: rgba(255, 255 , 255,0.1);
     }
+     .left label{
+         display: none;
+         user-select:none;
+         position: absolute;
+         color: rgba(200,200,200,0.9);
+         font-size: 50px;
+         z-index: 50px;
+         top: 150px;
+         left: 0px; 
+         cursor: pointer;
+     }
+    .right label{
+        cursor: pointer;
+        display: none;
+        user-select:none;
+        position: absolute;
+        color: rgba(200,200,200,0.9);
+         font-size: 50px;
+         left: 890px;
+         top: 150px;
+    }
+    .xm input:nth-of-type(1):checked ~ .left > label:nth-child(5) {display: block;}
+    .xm input:nth-of-type(2):checked ~ .left > label:nth-child(1) {display: block;}
+    .xm input:nth-of-type(3):checked ~ .left > label:nth-child(2) {display: block;}
+    .xm input:nth-of-type(4):checked ~ .left > label:nth-child(3) {display: block;}
+    .xm input:nth-of-type(5):checked ~ .left > label:nth-child(4) {display: block;}
+    .xm input:nth-of-type(1):checked ~ .right > label:nth-child(2) {display: block;}
+    .xm input:nth-of-type(2):checked ~ .right > label:nth-child(3) {display: block;}
+    .xm input:nth-of-type(3):checked ~ .right > label:nth-child(4) {display: block;}
+    .xm input:nth-of-type(4):checked ~ .right > label:nth-child(5) {display: block;}
+    .xm input:nth-of-type(5):checked ~ .right > label:nth-child(1) {display: block;}
+  
+
+
 
 
 
@@ -72,7 +106,7 @@
     <div class="xm">
      
     
-        <input type="radio" name="mi" id="i1">
+        <input checked type="radio" name="mi" id="i1">
         <img class="chang" src="https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg" alt="">
         <label for="i1" class="chang"></label>
         <input type="radio" name="mi" id="i2">
@@ -87,7 +121,21 @@
         <input type="radio" name="mi" id="i5">
         <img src="https://i1.mifile.cn/a4/xmad_15476942061027_STEvM.jpg" alt="">
         <label for="i5"></label>
-       
+        <div class="left">
+            <label for="i1">〈</label>
+            <label for="i2">〈</label>
+            <label for="i3">〈</label>
+            <label for="i4">〈</label>
+            <label for="i5">〈</label>
+        </div>
+        <div class="right">
+            <label for="i1">〉</label>
+            <label for="i2">〉</label>
+            <label for="i3">〉</label>
+            <label for="i4">〉</label>
+            <label for="i5">〉</label>
+        </div>
+      
                 
                 
                
