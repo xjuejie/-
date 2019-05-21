@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    .table{width: 60%;border-collapse: collapse;}
+    th{table-layout: fixed;text-align:left;   padding: 12px;}
+    tr > th:nth-of-type(1){width: 100px;margin-left: 0;height: 26px; }
+    tr > td:nth-of-type(2){width: 186px;} 
+    tr{
+        border: 1px solid rgb(200,200,200,0.5);
+        border-left: none;border-right: none;
+    }
+    thead:nth-child(1) > tr{
+        border-bottom: 2px solid rgb(200,200,200,0.5);
+    }
+    tbody:nth-last-child(1) > tr{
+        border-bottom: 0px;
+    }
+    /* .................................................................. */
+    .table-dark{
+        background:rgb(52,58,64);
+        color: white;
+    }
+    .thead-dark{
+        background-color:rgb(52,58,64);
+    }
+    .thead-light{
+        background-color: rgb(233,233,233);
+    }
+    .table-striped > tbody>tr:nth-child(2n+1){
+        background-color: rgba(123,133,133,0.2);
+    }
+    .table-bordered> tbody > tr:nth-last-child(1) >td:nth-child(3){margin-left:-132px ; display: block;
+    position: relative;top: 14px}
+    .table-bordered >tbody:nth-last-child(1){border-bottom: 1px solid rgb(200,200,200,0.5) }
+    .table-borderless tr{border: none}
+    .table-borderless thead:nth-child(1) > tr{border: none;}
+    .table-borderless> tbody > tr:nth-last-child(1) >td:nth-child(3){margin-left:-132px ; display: block;
+    position: relative;top: 14px}
+    .table-hover > tbody >tr:hover{ background-color: rgba(123,133,133,0.2);}
+    .table-hover >tbody > tr:nth-last-child(1) >td:nth-child(3){margin-left:-132px ; display: block;
+    position: relative;top: 14px}
+    .table-sm th{padding: 4px;}
+    .table-sm >tbody > tr:nth-last-child(1) >td:nth-child(3){margin-left:-132px ; display: block;
+    position: relative;top: 6px}
+
+
+
+    
+
+
+    
+ 
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+        <table class="table table-hover">
+                <thead class="">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+    
+</body>
+</html>
