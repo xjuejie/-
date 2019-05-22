@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oald</title>
+    <style type="text/css">
+    html,body{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+    }
+    div:nth-child(1){
+        width: 200px;
+        height: 100%;
+        float: left;
+        box-shadow: 0 0 2px;
+       
+        
+    }
+    div:nth-last-child(1), div:nth-last-child(2){
+        width: 200px;
+        height: 100%;
+        float: left;
+        box-shadow: 0 0 1px;
+       
+        
+     
+    }
+    
+    .first{
+        float: left;
+        overflow: hidden;
+        height: 100%;
+        width: calc(-600px + 100%);
+        min-width: 200px;
+        box-shadow: 0 0 1px;
+        
+        }
+    .first > div{
+        height: 200px;
+        box-shadow: 0 0 1px;
+        width:  100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="first">
+        <div></div>
+    </div>
+    <div></div>
+    <div></div>
+</body>
+</html>
