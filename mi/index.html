@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小米商城-小米、小米MIX 3、红米Note 7,小米电视官方网站</title>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+    html,body{
+        margin: 0;
+        padding: 0;
+
+    }
+    .top{
+        background-color:rgb(51,51,51);
+        height: 40px;
+        width: 85em;
+        position: relative;
+     }
+     .top > .top-nav{
+         color: rgb(66, 66, 66);
+         margin-left: 60px;
+         font-size: 12px;
+         word-spacing: 2px;
+         width: 690px;
+     }
+     .top a{
+         font-size: 12px;
+         line-height: 40px;
+         color: #b0b0b0;
+         text-decoration: none;
+         padding-top: 15px;
+         padding-bottom: 10px;       
+     }
+     .top-nav a:nth-child(1)::before{
+         content:" ";
+         display: block;
+         position: absolute;
+         width: 50px;
+         height: 50px;
+         background: url(https://s01.mifile.cn/i/mi-logo.png) rgb(255,103,0);
+         top: 70px;
+         
+         
+     }
+     .top a:hover{
+         color: white;
+     }
+     .top > .top-nav > .xiazai::after{
+         display: none;
+         position:absolute;
+         content: "小米商城APP";
+         margin-left: -85px;
+         top:150px;
+         padding-left: 18px;
+         width: 102px;
+         font-size: 1.2em;
+         color: #000;
+         box-shadow: 0 1px #eeeeee,1px 0 #eeeeee,-1px 0 #eeeeee;
+     }
+     .top > .top-nav > .xiazai::before{
+        position:absolute;
+        content: " ";
+        display: none;
+        border:10px solid rgba(111, 1, 11, 0);
+        border-bottom-color: rgba(255, 255, 255, 1);
+        top: 20px;
+        margin-left: 15px;
+
+        
+
+     }
+     .top > .top-nav > .xiazai img{
+         display: none;
+         position:absolute;
+         width: 100px;
+         height: 100px;
+         top: 40px;
+         margin-left: -80px;
+         
+         padding: 10px;
+         box-shadow: 1px 0 #eeeeee,-1px 0 #eeeeee;
+    }
+    .top > .top-nav > .xiazai:hover::after{
+        display: inline-block;
+      }
+      .top > .top-nav > .xiazai:hover > img{
+        display: inline-block;    
+      }
+      .top > .top-nav > .xiazai:hover::before{
+          display: inline-block;
+      }
+      .top-nav1{
+          display: inline-block;
+          position: absolute;
+          left:1000px;
+          top: 1px;
+          color:rgb(66, 66, 66);
+          width: 300px;
+          word-spacing: 2px;
+      }
+      .gouwu{
+          background-color:rgba(255, 255, 255, 0.1);
+          padding: 20px;
+          margin-left: 20px;
+    }
+    .logo-nav{
+        height: 100px;
+        margin-left: 250px;
+       
+        font-size: 15.5px;
+    }
+    .logo-nav ul{width: 50em;}
+    .logo-nav li{
+        display: inline-block;
+        padding: 10px;
+        padding-top: 26px;
+        padding-bottom: 38px;
+    }
+    .logo-nav input{
+        height: 50px;
+        width: 252px;
+        font-size: 16px;
+        line-height: 50px;
+        position: relative;
+        right: -750px;
+        top: -90px;
+
+    }
+    .shousuo{
+        display: none;
+        position: relative;
+        right: -750px;
+        border: 1px solid orange;
+        width: 249px;
+        top: -91px;
+        border-collapse: collapse;
+        background: white;
+        z-index: 2;
+    }
+    .shousuo td {
+        width: 124px;
+        font-size: 12px;
+        padding: 5px;
+        border-collapse: collapse;    
+        color: #333333;
+
+
+    }
+    .shousuo td a{text-decoration: none;  color: #333333;
+        }
+    .shousuo tr td:nth-child(2){
+        text-align:right;
+    }
+    .logo-nav input:focus ~ .shousuo{
+        display: block;
+        
+    }
+    .logo-nav input:focus + button{border: 1px solid orange;}
+    .shousuo:hover{
+        display: block;
+    }
+    .logo-nav input:focus {
+        border: 1px solid orange;
+        outline: none;
+    }
+    .shousuo tr:hover{
+        background-color: #eeeeee;
+    }
+    .logo-nav button{
+        position: absolute;
+        width: 50px;
+        font-size: 40px;
+        height: 50px;
+        left: 1250px;
+        top:65px;
+        background:white;
+        outline: none;
+        border: 1px solid #b0b0b0;
+    }
+    .logo-nav button:hover{
+        background-color: orangered;
+        color:white;
+    }
+    .logo-nav a{
+        text-decoration: none;
+        color: black;
+    }
+    .xmsj{
+        width:100em;
+        height: 240px;
+        position: absolute;
+        left: 0px; 
+        top: 140px;
+        border-top:1px solid white;
+        box-shadow: 0 1px 1px #dddddd;
+        background: #fff;
+        z-index: 2;
+        display: none;
+    }
+    .xmsj div {
+        display: none;
+        float: left;
+        padding-top: 50px;
+        padding-left: 20px;
+        position:relative;
+        
+        
+       }
+    .xmsj div:nth-child(1) a::after{content: "小米9";margin-left: 80px;}
+    .xmsj div:nth-child(2) a::after{content: "小米9 SE";margin-left: 65px;}
+    .xmsj div:nth-child(3) a::after{content: "小米8 青春版";margin-left: 55px;}
+    .xmsj div:nth-child(4) a::after{content: "小米MIX 3";margin-left: 60px;}
+    .xmsj div:nth-child(5) a::after{content: "小米8";margin-left: 80px;}
+    .xmsj div:nth-child(6) a::after{content: "小米Play";margin-left: 70px;}
+    .xmsj div a::after{display:block;position: absolute; font-size: 13px}
+    .xmsj p{ 
+        display: block;
+        width: 100px;
+        position: absolute;
+        margin-left: 70px;
+        font-size: 12px;
+        color: orangered;
+    }
+    .logo-nav li:hover{color: orangered;}
+    .logo-nav li:hover .xmsj div{ display:inline-block;}
+    .xmsj:hover{display: block;}
+    .logo-nav li:hover .xmsj{
+      display: block;
+      border-top:1px solid #b0b0b0;
+      border-bottom:1px solid #b0b0b0;
+     /*  下面是轮播图 */
+    }
+    div.xm{
+        position: relative;
+        margin-left: 58px;
+        z-index: 0;
+    } 
+     .xm input{
+        display: none;
+    }
+    .xm img{
+        opacity: 0;
+        width: 1230px;
+        height: 460px;
+        position:absolute;
+        top: 0;
+        left: 0;
+        transition: all 1s;
+    }
+  
+    .xm input:checked + img{
+        opacity: 1;
+    }
+    .xm > label{
+        display:inline-block;
+        width:8px;
+        height: 8px;
+        margin: 5px;
+        border: 2px solid rgba(150,150,150,0.2);
+        position: relative;
+        z-index: 5;
+        border-radius: 100px;
+        top: 430px;
+        left: 1000px;
+        background:rgba(100, 100, 100,0.3)
+    }
+   input:checked + img + label{
+        background: #fff;
+    }
+    .xm label:hover{
+        background: rgba(255, 255 , 255,0.1);
+    }
+     .left label{
+         display: none;
+         user-select:none;
+         position: absolute;
+         color: rgba(200,200,200,0.9);
+         font-size: 50px;
+         z-index: 50px;
+         top: 150px;
+         left: 200px; 
+         cursor: pointer;
+     }
+    .right label{
+        cursor: pointer;
+        display: none;
+        user-select:none;
+        position: absolute;
+        color: rgba(200,200,200,0.9);
+         font-size: 50px;
+         left:1150px ;
+         top: 150px;
+    }
+    .xm input:nth-of-type(1):checked ~ .left > label:nth-child(5) {display: block;}
+    .xm input:nth-of-type(2):checked ~ .left > label:nth-child(1) {display: block;}
+    .xm input:nth-of-type(3):checked ~ .left > label:nth-child(2) {display: block;}
+    .xm input:nth-of-type(4):checked ~ .left > label:nth-child(3) {display: block;}
+    .xm input:nth-of-type(5):checked ~ .left > label:nth-child(4) {display: block;}
+    .xm input:nth-of-type(1):checked ~ .right > label:nth-child(2) {display: block;}
+    .xm input:nth-of-type(2):checked ~ .right > label:nth-child(3) {display: block;}
+    .xm input:nth-of-type(3):checked ~ .right > label:nth-child(4) {display: block;}
+    .xm input:nth-of-type(4):checked ~ .right > label:nth-child(5) {display: block;}
+    .xm input:nth-of-type(5):checked ~ .right > label:nth-child(1) {display: block;}
+  
+  .caidan{
+      margin-top: -26px;
+      position: relative;
+     width: 200px;
+  }
+  .caidan-nav{
+      background:rgba(50, 50, 50,0.8);
+      width: 220px;
+      height: 440px;
+      margin-left:58px;
+      padding: 10px;
+  }
+  .caidan ol li{
+    list-style: none;
+    line-height: 41px;
+    width: 190px;
+    font-size: 15px;
+    color:#eeeeee;
+    position: relative;
+    left: -50px;
+    padding-left:50px;
+  
+   
+   
+      }
+  
+  .caidan  li ul{
+      display: none;
+      width: 953px;
+      height: 460px;
+      float: left;
+      position: absolute;
+      left:240px;
+      top:-26px;
+      background-color:white;
+      box-shadow: 0 0 10px #bbbbbb
+
+  }
+  .caidan ul li{
+      float: left;
+      display: inline-block;
+      margin: 10px;
+      margin-top: 20px;
+      color: black;
+      width: 160px;
+      
+      }
+  .caidan li:hover ul{display:inline-block}
+  .caidan ol > li:hover {background: orangered}
+  .caidan ul > li:hover{color: orangered}
+  .lunbo{position: relative;top:-10px;}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top-nav">
+            <a href="mi.html" target="_blank"> 小米商城 </a> | 
+            <a href="https://www.miui.com/" target="_blank"> MIUI </a> | 
+            <a href="https://iot.mi.com/index.html" target="_blank"> loT </a> | 
+            <a href="https://i.mi.com/" target="_blank"> 云服务 </a> | 
+            <a href="https://jr.mi.com/?from=micom" target="_blank">金融 </a> | 
+            <a href="https://youpin.mi.com/" target="_blank"> 有品 </a> | 
+            <a href="https://xiaoai.mi.com/" target="_blank"> 小爱开放平台 </a> | 
+            <a href="https://qiye.mi.com/" target="_blank"> 企业团购 </a> | 
+            <a href="https://www.mi.com/aptitude/list/?id=41" target="_blank"> 资质证照 </a> | 
+            <a href="https://www.mi.com/aptitude/list/" target="_blank"> 协议规则 </a> | 
+            <a href="https://www.mi.com/appdownload/" target="_blank" class="xiazai">下载app<img src="https://i1.mifile.cn/f/i/17/appdownload/download.png?1"> </a> | 
+            <a href="https://www.mi.com/#J_modal-globalSites" target="_blank"> Select Region</a>
+        </div>
+        <div class="top-nav1">
+            <a href="javascript:void(0);">登录</a> | 
+            <a href="javascript:void(0);">注册</a> |
+            <a href="">消息通知</a> 
+            <a href="" class="gouwu"><i class="fa credit-card-alt"></i>购物车(0)</a>
+        </div>
+    </div>
+    <div class="logo">
+        <div class="logo-nav">
+            <ul>
+                <li><a></a>小米手机
+                    <div class="xmsj">
+                        <div><a href="https://www.mi.com/mi9/">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png"width="200px" height="120px"></a>
+                        <p>2999元</p></div>
+                        <div><a href="https://www.mi.com/mi9se/">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9se-320.png"width="200px" height="120px"></a>
+                        <p>1999元</p></div>
+                        <div><a href="https://www.mi.com/mi8youth/">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/qingchun-320.png"width="200px" height="120px"></a>
+                        <p>1499元</p></div>
+                        <div><a href="https://www.mi.com/mix3/">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mix3-320.png"width="200px" height="120px"></a>
+                        <p>3299元</p></div>
+                        <div><a href="https://www.mi.com/mi8/">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/pc-320-220-mi8.png"width="200px" height="120px"></a>
+                        <p>2599元</p></div>
+                        <div><a href="https://www.mi.com/miplay/">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/pc-320-miplay-1.png"width="200px" height="120px"></a>
+                        <p>1099元</p></div>
+
+
+
+                    </div>
+                </li>
+                <li><a></a>Redmi 红米</li>
+                <li><a></a>电视</li>
+                <li><a></a>笔记本</li>
+                <li><a></a>家电</li>
+                <!-- <li><a></a>新品</li> -->
+                <li><a></a>路由器</li>
+                <li>智能硬件</li>
+                <li> <a href="https://www.mi.com/service/">服务</a></li>
+                <li><a href="http://www.xiaomi.cn/">社区</a></li>
+            </ul>
+                <input type="search">
+                <button type="submit">&#8981;</button>
+                <div class="shousuo">
+                    <table cellspacing="0" >
+                        <colgroup>
+                        <col>
+                        <col class="right1">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                 <td><a href="https://search.mi.com/search_%E5%B0%8F%E7%B1%B36X" target="_blank">小米6X</a></td>
+                                 <td>约有6件</td>
+                            </tr>
+                            <tr>
+                                 <td>小米MIX 2S</td>
+                                 <td>约有5件</td>
+                            </tr>
+                            <tr>
+                                 <td>黑鲨游戏手机</td>
+                                 <td>约有3件</td>
+                            </tr>
+                            <tr>
+                                 <td>红米Note 5</td>
+                                 <td>约有6件</td>
+                            </tr>
+                            <tr>
+                                <td>红米5A</td>
+                                <td>约有13件</td>
+                            </tr>
+                            <tr>
+                                <td>小米电视4C</td>
+                                <td>约有5件</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+           
+        </div>
+    </div>
+
+ <div class="lunbo"> 
+      <div class="xm">  <!-- 轮播图 -->
+     
+    
+            <input  type="radio" name="mi" id="i1">
+            <img class="chang" src="https://i1.mifile.cn/a4/xmad_15590358701464_sEyqY.jpg" alt="">
+            <label for="i1" class="chang"></label>
+            <input type="radio" name="mi" id="i2">
+            <img src="https://i1.mifile.cn/a4/xmad_15590357922113_dZxos.jpg" alt="">
+            <label for="i2"></label>
+            <input checked type="radio" name="mi" id="i3">
+            <img src="https://i1.mifile.cn/a4/xmad_15590487108559_JOpcA.jpg" alt="">
+            <label for="i3"></label>
+            <input type="radio" name="mi" id="i4">
+            <img src="https://i1.mifile.cn/a4/xmad_15586683348207_opnBm.jpg" alt="">
+            <label for="i4"></label>
+            <input type="radio" name="mi" id="i5">
+            <img src="https://i1.mifile.cn/a4/xmad_15590297188488_lNBWg.jpg" alt="">
+            <label for="i5"></label>
+            <div class="left">
+                <label for="i1">〈</label>
+                <label for="i2">〈</label>
+                <label for="i3">〈</label>
+                <label for="i4">〈</label>
+                <label for="i5">〈</label>
+            </div>
+            <div class="right">
+                <label for="i1">〉</label>
+                <label for="i2">〉</label>
+                <label for="i3">〉</label>
+                <label for="i4">〉</label>
+                <label for="i5">〉</label>
+            </div>
+        </div>
+    <div class="caidan">
+        <div class="caidan-nav">
+        <ol>
+          <li>手机 电话卡
+              <ul>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+                  <li>小米9</li>
+              </ul>
+          </li>
+          <li>电视 盒子</li>
+          <li>笔记本 平板</li>
+          <li>家电 插线板</li>
+          <li>出行 穿戴</li>
+          <li>智能路由器</li>
+          <li>电源 配件</li>
+          <li>健康 儿童</li>
+          <li>耳机 音箱</li>
+          <li>生活 箱包</li>
+        </ol>
+        </div>
+    </div>
+</div>     
+</body>
+</html>
