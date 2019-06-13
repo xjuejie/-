@@ -8,12 +8,15 @@
     <link href="../font-awesome/iconfont.css" rel="stylesheet">
     <style type="text/css">
      html,body{
+        height: 100%;;
         margin: 0;
         padding: 0;
+        clear: both;
+        xoverflow-x: hidden;
 
     }
     .top{
-        width: 100vw;
+        width: 100%;
         height: 40px;
         background-color:rgb(51,51,51);
         min-width:1226px;   
@@ -89,27 +92,28 @@
           margin-left: 20px;
     }
       /* ------------------------------------------------------------------------ */
-      .logo{xposition: absolute;}
+      .logo{position: relative;width: 100%;height: 0;}
       .logo-nav{
           width: 1226px;
+          height: 0;
           margin-left: auto;
           margin-right: auto;
         
     }
       .logo-nav ul{
-          position: relative;
           float: left;
           width: 890px;
           height: 88px;
           font-size: 16px;
           list-style-type: none;
-          z-index: 2;
+          z-index: 5;
 
       }
       .logo-nav li{
          float: left;
          padding: 10px;
          padding-top:20px;
+         z-index: 5;
       }
       .logo-nav li a{text-decoration: none;color:black;}
       .logo-nav li:nth-child(1){width: 200px;}
@@ -163,16 +167,19 @@
         font-size: 12px;
         text-decoration: none;  
     }
-    .search-hot-words{position: absolute;text-align: right;top: 38px;right: 62px;}
+    .search-hot-words{position: absolute;text-align: right;top: 38px;right: 62px;} 
      .xmsj{
-         display: none;
          position:absolute;
+         width: 100%;
+         height: 0;
+         overflow: hidden;
          left:0 ;
-         top: 100px;
+         top: 159px;
          background: white;
-         border-top: 1px solid #b0b0b0;
-         box-shadow: 0px 1px 1px #b0b0b0 ;
+         
          z-index: 3;
+         transition: height 0.6s;
+         
      }
      .xmsj-1{
          width: 1226px;
@@ -197,7 +204,9 @@
     .xmsj div:nth-child(6) a::after{content: "小米Play";margin-left: 70px;}
     .xmsj div a::after{display:block;position: absolute; font-size: 13px}
     .logo-nav li:hover{color: orangered;}
-    .logo-nav li:hover .xmsj div{ display:inline-block;}
+    .logo-nav li:hover .xmsj{
+        height: 180px;border-top: 1px solid #b0b0b0;
+         box-shadow: 0px 1px 1px #b0b0b0 ;}
     .xmsj:hover{display: block;}
     .logo-nav li:hover .xmsj{
       display: block;
@@ -206,7 +215,7 @@
      /*  下面是轮播图 */
      .lunbo{
         position: absolute; 
-        width: 100vw;
+        width: 100%;
         margin-left: auto;
         margin-right: auto; 
         height: 460px;
@@ -380,7 +389,137 @@
 .font a i{
     font-size: 25px;
 }
+.nav-4{text-align: center;margin-top:20px;margin-bottom:30px}
+.nav-4 img{
+    width: 1226px;
+    height: 120px; 
+}
+.phone{background: rgb(245,245,245);}
+.phone-1{
+    width: 1226px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background: rgb(245,245,245);
+    padding-top: 30px;
     
+}
+.phone-1 h3{
+    font-weight: 200;
+    xdisplay: inline-block;
+    font-size: 22px;
+    xfloat: left;
+}
+.phone .phone-1 > a{
+    margin-top: 60px;
+    position: absolute;
+    font-size: 1em;
+    text-decoration: none;
+    color: #000;
+    top:0;
+    right: 0;
+}
+.phone-1 > a > i{
+    font-size: 0.8em;
+    border-radius: 50%;
+    color: white;
+    background: #B0B0B0;
+    padding: 4px;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+.phone-1 > a:hover{color:orangered;}
+.phone-1 > a:hover i{background: orangered;}
+.phone-1>div:nth-of-type(1){width: 300px;height: 614px;}
+.phone-1>div:nth-of-type(1) div{padding-bottom: 10px;}
+.phone-1>div:nth-of-type(2){display: inline-block;z-index: 2;position: absolute;right: 0;top:115px}
+.phone-1>div:nth-of-type(2) ul{
+    xfloat: left;
+    display: flex;
+    width: 992px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: -10px;
+    position: relative;
+}
+.phone-1>div:nth-of-type(2) li{
+    width: 234px;
+    height: 300px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    background: white;
+}
+.phone-1>div:nth-of-type(2) li>p{color: #B0B0B0;font-size: 12px}
+.phone-1>div:nth-of-type(2) li>a{color: #333;text-decoration: none;font-size: 14px}
+.phone-1 div li:hover {transform:translateY(-3px);box-shadow: 0 1px 20px #cccccc;transition: .4s}
+.phone-1 div:nth-of-type(1) div img:hover {transform:translateY(-3px);box-shadow: 0 1px 20px #cccccc;transition: .4s}
+.flag{
+    font-size:12px;
+    color: white;
+   padding: 0 15px 5px 15px;
+}
+.flag-new{background:#83c44e;}
+.flag-old{background: #e53935}
+.num{color: orangered;font-size: 13px;}
+.num span{color: #b0b0b0;text-decoration: line-through;}
+.jiadian-1 > li:nth-of-type(1){right: 190px;}
+.jiadian-1 > li:nth-of-type(2){right: 100px; padding-bottom: 50px;}
+.jiadian-1 > li:nth-of-type(3){right: 50px;padding-bottom: 50px;}
+.jiadian-1 > li:nth-of-type(4){padding-bottom: 50px;}
+.jiadian-1 > li:nth-of-type(1):hover{color:orangered;transition: all 0 10s;}
+.jiadian-1 > li:nth-of-type(2):hover{color:orangered;transition: all 0 10s;}
+.jiadian-1 > li:nth-of-type(3):hover{color:orangered;transition: all 0 10s;}
+.jiadian-1 > li:nth-of-type(4):hover{color:orangered;transition: all 0 10s;}
+.jiadian-1 > li:nth-of-type(1):hover ~ div:nth-last-of-type(4){xdisplay: inline-block;z-index: 5;}
+.jiadian-1 > li:nth-of-type(2):hover ~ div:nth-last-of-type(3){xdisplay: inline-block;z-index: 5;}
+.jiadian-1 > li:nth-of-type(3):hover ~ div:nth-last-of-type(2){xdisplay: inline-block;z-index: 5;}
+.jiadian-1 > li:nth-of-type(4):hover ~ div:nth-last-of-type(1){xdisplay: inline-block;z-index: 5;}
+/* .jiadian-1 >div:nth-last-of-type(1):hover ~ li:nth-of-type(4) {color: orangered}
+.jiadian-1 >div:nth-last-of-type(2):hover ~ li:nth-of-type(3) {color: orangered}
+.jiadian-1 >div:nth-last-of-type(3):hover ~ li:nth-of-type(2) {color: orangered}
+.jiadian-1 >div:nth-last-of-type(4):hover ~ li:nth-of-type(1) {color: orangered} */
+.jiadian-1 .conter:hover{z-index: 5;}
+.phone-nav{
+    list-style-type: none;
+    position: absolute;
+    top:50px;
+    right: 0;
+    padding: 10px;
+    margin-top:-10px;
+    }
+.jiadian-1 .conter{
+    xdisplay:none;
+    position: absolute;
+    right: 0;
+    top:115px;
+    transition:all 0 10s;
+
+    
+}
+.conter ul{
+    display: flex;
+    width: 992px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: -10px;
+}
+.conter li{
+    width: 234px;
+    height: 300px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    background: white;
+}
+.conter li>p{color: #B0B0B0;font-size: 12px;width: 234px;}
+.conter li>a{color: #333;text-decoration: none;font-size: 14px}
+.conter ul li:nth-last-child(1){ width: 234px;height: 143px;position: absolute;right: 0;bottom: 0px;}
+.conter ul li:nth-last-child(2){ width: 234px;height: 143px;}
 
    </style>
 </head>
@@ -578,11 +717,413 @@
                 <a href=""><i class="iconfont icon-redo"></i><br>以旧换新</a>
                 <a href=""><i class="iconfont icon-exchange"></i><br>话费充值</a>
             </div>
-            <div><a><img src="https://i1.mifile.cn/a4/xmad_15553962519926_fcMZl.jpg"></a></div>
-            <div><a><img src="https://i1.mifile.cn/a4/xmad_15594893304527_cTIRy.jpg"></a></div>
-            <div><a><img src="https://i1.mifile.cn/a4/xmad_15592075074072_GUpWM.jpg"></a></div>
+            <div><a href="https://www.mi.com/redminote7pro/" target="_blank"><img src="https://i1.mifile.cn/a4/xmad_15553962519926_fcMZl.jpg"></a></div>
+            <div><a href="https://www.mi.com/redminote7/" target="_blank"><img src="https://i1.mifile.cn/a4/xmad_15594893304527_cTIRy.jpg"></a></div>
+            <div><a href="https://item.mi.com/product/4348.html" target="_blank"><img src="https://i1.mifile.cn/a4/xmad_15513348763999_sTLBm.jpg"></a></div>
         </div>
-
+    <div class="nav-4">
+         <a href="https://www.mi.com/redmik20pro/" target="_blank"><img src="https://i1.mifile.cn/a4/xmad_15597499521915_RKGWC.jpg" alt=""></a>
+    </div>
+<div class="phone">
+    <div class="phone-1">
+         <h3>手机</h3>
+         <a href="https://www.mi.com/p/1915.html">查看全部 <i class="iconfont icon-angle-right"></i></a>
+         <div>
+         <div>
+             <a href="https://www.mi.com/mi9/" target="_blank"><img src="https://i1.mifile.cn/a4/xmad_15597911116985_wSEjl.jpg" width="234px" height="614px"></a>
+         </div>
+         <div></div>
+         </div>
+        <div>
+            <ul>
+                <li>
+                    <span class="flag flag-new">新品</span><br>
+                    <a href="https://item.mi.com/1190800033.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" width="160px" height="160px" alt=""></a>
+                    <br>
+                    <a href="https://item.mi.com/1190800033.html" target="_blank">  小米96GB+128GB</a>
+                    <p>骁龙855，索尼4800万超广角微距三摄</p>
+                    <span class="num">2999元</span>
+                </li>
+                <li>
+                    <span class="flag ">新品</span><br>
+                    <a href="https://www.mi.com/mi8ud/" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1538019009.57772743!220x220.png" width="160px" height="160px" alt=""></a>
+                    <br>
+                    <a href="https://www.mi.com/mi8ud/" target="_blank">小米8 屏幕指纹版 6GB+128GB</a>
+                    <p>全球首款压感屏幕指纹 骁龙845处理器</p>
+                    <span class="num">2499元 <span> 2999元</span></span>
+                </li>
+                <li>
+                    <span class="flag flag-new">新品</span><br>
+                    <a href="https://item.mi.com/1185200033.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1547020852.30751177!220x220.jpg" width="160px" height="160px" alt=""></a>
+                    <br>
+                    <a href="https://item.mi.com/1185200033.html" target="_blank">Redmi Note 7 3GB+32G</a>
+                    <p>4800万拍照千元机，18个月超长质保</p>
+                    <span class="num">999元</span>
+                </li>
+                <li>
+                    <span class="flag flag-new">新品</span><br>
+                    <a href="https://item.mi.com/1185200033.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1545457719.47232999!220x220.png" width="160px" height="160px" alt=""></a>
+                    <br>
+                    <a href="https://item.mi.com/1185200033.html" target="_blank">小米Play 4GB+64GB</a>
+                    <p>5.84"小水滴全面屏，后置1200万 A</p>
+                    <span class="num">1099元</span>
+                </li>
+                <li>
+                    <span class="flag flag-old">减 200 元</span><br>
+                    <a href="https://item.mi.com/1185100030.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1537324004.08544830!220x220.jpg" width="160px" height="160px" alt=""></a>
+                    <br>
+                    <a href="https://item.mi.com/1185100030.html" target="_blank">小米8 SE 6GB+64GB</a>
+                    <p>潮流镜面渐变色，2400万自拍旗舰</p>
+                    <span class="num">1499元<span> 1699 元</span></span>
+                </li>
+                <li>
+                    <span class="flag flag-old">享8折</span><br>
+                    <a href="https://item.mi.com/1183600012.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1527685277.65255600!220x220.jpg" width="160px" height="160px" alt=""></a>
+                    <br>
+                    <a href="https://item.mi.com/1183600012.html" target="_blank"> 黑鲨游戏手机 2 8GB+128GB</a>
+                    <p>三星 AMOLED 全面屏，骁龙710</p>
+                    <span class="num">1599元<span> 1999 元</span></span>
+                </li>
+                <li>
+                    <span class="flag ">新品</span><br>
+                    <a href="https://item.mi.com/1191100012.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1552805583.57297897!220x220.jpg" width="160px" height="160px" alt=""></a>
+                    <br>
+                    <a href="https://item.mi.com/1191100012.html" target="_blank">小米MIX 3 6GB+128GB</a>
+                    <p>骁龙855 旗舰配置 极速响应</p>
+                    <span class="num">3199元<span> 3499 元</span></span>
+                </li>
+                <li>
+                    <span class="flag " ></span><br>
+                    <a href="https://item.mi.com/product/10000123.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1540429613.4617799!220x220.jpg" width="160px" height="160px" alt=""></a>
+                    <br>
+                    <a href="https://item.mi.com/product/10000123.html" target="_blank">  小米96GB+128GB</a>
+                    <p>磁动力滑盖全面屏 / 四曲面陶瓷机身</p>
+                    <span class="num">3299元</span>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-4">
+            <a href="https://www.mi.com/a/h/10053.html" target="_blank"><img src="https://i1.mifile.cn/a4/xmad_15602462509739_zqQwg.jpg" alt=""></a>
+       </div>
+         </div>
     
+   <div class="phone-1 jiadian-1">
+    <h3 class="name" >家电</h3>
+    <li class="phone-nav">热门</li>
+    <li class="phone-nav">电视影音</li>
+    <li class="phone-nav">电脑</li>
+    <li class="phone-nav">家居</li>
+    <div>
+    <div>
+        <a href="http://www.mi.com/water2/" target="_blank"><img src="https://i1.mifile.cn/a4/xmad_15021710762698_QXnBu.jpg" width="234px" height="300px"></a>
+    </div>
+    <div>
+            <a href="https://item.mi.com/product/4348.html" target="_blank"><img src="https://i1.mifile.cn/a4/xmad_15123939053142_dFlAw.jpg" width="234px" height="300px"></a>
+    </div>
+    </div>
+    
+    <div class="conter">
+       <ul>
+           <li>
+               <span class="flag flag-new">新品</span><br>
+               <a href="https://item.mi.com/1190800033.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1560161251.21862332!220x220.jpg" width="160px" height="160px" alt=""></a>
+               <br>
+               <a href="https://item.mi.com/1190800033.html" target="_blank">  米家互联网洗烘一体机 Pro 10kg</a>
+               <p></p><br>
+               <span class="num">2999元</span>
+           </li>
+           <li>
+               <span class="flag flag-old">减 500 元</span><br>
+               <a href="https://www.mi.com/mi8ud/"><img src="https://i1.mifile.cn/a1/pms_1545286017.38639954!220x220.jpg" width="160px" height="160px" alt=""></a>
+               <br>
+               <a href="https://www.mi.com/mi8ud/"> 米家互联网空调（一级能效）</a>
+               <p></p><br>
+               <span class="num">2199元 <span> 2699元</span></span>
+           </li>
+           <li>
+               <span class="flag flag-new">新品</span><br>
+               <a href="https://item.mi.com/1185200033.html" target="_blank"><img src="https://i1.mifile.cn/a4/xmad_15350951136177_QUuVm.png" width="160px" height="160px" alt=""></a>
+               <br>
+               <a href="https://item.mi.com/1185200033.html" target="_blank"> 15.6"笔记本 i5 4G MX110</a>
+               <p></p><br>
+               <span class="num">4199元</span>
+           </li>
+           <li>
+               <span class="flag ">新品</span><br>
+               <a href="https://item.mi.com/1185200033.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1524636075.71677607!220x220.jpg" width="160px" height="160px" alt=""></a>
+               <br>
+               <a href="https://item.mi.com/1185200033.html" target="_blank">13.3"小米笔记本Air 四核i7 8G 2</a>
+               <p></p><br>
+               <span class="num">5999元</span>
+           </li>
+           <li>
+               <span class="flag ">减 200 元</span><br>
+               <a href="https://item.mi.com/1185100030.html" target="_blank"><img src="https://i1.mifile.cn/a4/xmad_14972549116226_tZpod.png" width="160px" height="160px" alt=""></a>
+               <br>
+               <a href="https://item.mi.com/1185100030.html" target="_blank"> 米家空气净化器Pro</a>
+               <p>OLED 显示屏幕 / 激光颗粒物传感器</p><br>
+               <span class="num">2999元</span>
+           </li>
+           <li>
+               <span class="flag ">享8折</span><br>
+               <a href="https://item.mi.com/1183600012.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1504498936.11861982!220x220.jpg" width="160px" height="160px" alt=""></a>
+               <br>
+               <a href="https://item.mi.com/1183600012.html" target="_blank">米家电水壶</a>
+               <p>一杯水，是一家人的安心</p><br>
+               <span class="num">2999元</span>
+           </li>
+           <li>
+               <span class="flag ">新品</span><br>
+               <a href="https://item.mi.com/1191100012.html" target="_blank"><img src="https://i1.mifile.cn/a4/xmad_15281923207128_rOfDp.png" width="160px" height="160px" alt=""></a>
+               <br>
+               <a href="https://item.mi.com/1191100012.html" target="_blank">米家LED吸顶灯</a>
+               <p>用光线，还原理想生活</p><br>
+               <span class="num">2999元</span>
+           </li>
+           <li>
+               <span class="flag " ></span><br>
+               <a href="https://item.mi.com/product/10000123.html" target="_blank">  小米净水器</a>
+              <br>
+               <span class="num">1999元</span><br>
+               <a href="https://item.mi.com/product/10000123.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1521634907.16181074!220x220.jpg"width="80px" height="80px" ></a>
+            </li>
+           <li>
+            <a href="http://www.mi.com/p/3469.html?client_id=180100041086&masid=17409.0245"><h3>浏览更多</h3>
+                <p>热门</p>
+            <i class="iconfont icon-angle-right"></i></a>
+
+           </li>
+
+       </ul>
+    </div>
+    <div class="conter">
+        <ul>
+            <li>
+                <span class="flag flag-new">新品</span><br>
+                <a href="https://item.mi.com/1190800033.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1555935546.09711490!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1190800033.html" target="_blank">  小米96GB+128GB</a>
+                <p>骁龙855，索尼4800万超广角微距三摄</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag ">新品</span><br>
+                <a href="https://www.mi.com/mi8ud/"><img src="https://i1.mifile.cn/a1/pms_1555947485.70419235!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://www.mi.com/mi8ud/">  小米96GB+128GB</a>
+                <p>全球首款压感屏幕指纹 骁龙845处理器</p><br>
+                <span class="num">2499元 <span> 2999元</span></span>
+            </li>
+            <li>
+                <span class="flag flag-new">新品</span><br>
+                <a href="https://item.mi.com/1185200033.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1500287084.72131750!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1185200033.html" target="_blank">  小米96GB+128GB</a>
+                <p>4800万拍照千元机，18个月超长质保</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag flag-new">新品</span><br>
+                <a href="https://item.mi.com/1185200033.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1522318330.86967810!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1185200033.html" target="_blank">  小米96GB+128GB</a>
+                <p>5.84"小水滴全面屏，后置1200万 A</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag flag-old">减 200 元</span><br>
+                <a href="https://item.mi.com/1185100030.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1539315570.63599432!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1185100030.html" target="_blank">  小米96GB+128GB</a>
+                <p>潮流镜面渐变色，2400万自拍旗舰</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag flag-old">享8折</span><br>
+                <a href="https://item.mi.com/1183600012.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1535103027.24861415!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1183600012.html" target="_blank">  小米96GB+128GB</a>
+                <p>三星 AMOLED 全面屏，骁龙710</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag ">新品</span><br>
+                <a href="https://item.mi.com/1191100012.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1516975996.71444436!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1191100012.html" target="_blank">  小米96GB+128GB</a>
+                <p>骁龙855 旗舰配置 极速响应</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                    <span class="flag " ></span><br>
+                    <a href="https://item.mi.com/product/10000123.html" target="_blank">  小米净水器</a>
+                   <br>
+                    <span class="num">1999元</span><br>
+                    <a href="https://item.mi.com/product/10000123.html" target="_blank"><img src="https://i1.mifile.cn/a1/pms_1516976220.59976234!220x220.jpg"width="80px" height="80px" ></a>
+                
+            </li>
+            <li>
+                    <a href="http://www.mi.com/p/3469.html?client_id=180100041086&masid=17409.0245"><h3>浏览更多</h3>
+                        <p>热门</p>
+                    <i class="iconfont icon-angle-right"></i></a>
+               </li>
+        </ul>
+    </div>
+    <div class="conter">
+        <ul>
+            <li>
+                <span class="flag flag-new">新品</span><br>
+                <a href="https://item.mi.com/1190800033.html"><img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1190800033.html">  小米96GB+128GB</a>
+                <p>骁龙855，索尼4800万超广角微距三摄</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag ">新品</span><br>
+                <a href="https://www.mi.com/mi8ud/"><img src="https://i1.mifile.cn/a1/pms_1538019009.57772743!220x220.png" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://www.mi.com/mi8ud/">  小米96GB+128GB</a>
+                <p>全球首款压感屏幕指纹 骁龙845处理器</p><br>
+                <span class="num">2499元 <span> 2999元</span></span>
+            </li>
+            <li>
+                <span class="flag flag-new">新品</span><br>
+                <a href="https://item.mi.com/1185200033.html"><img src="https://i1.mifile.cn/a1/pms_1547020852.30751177!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1185200033.html">  小米96GB+128GB</a>
+                <p>4800万拍照千元机，18个月超长质保</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag flag-new">新品</span><br>
+                <a href="https://item.mi.com/1185200033.html"><img src="https://i1.mifile.cn/a1/pms_1545457719.47232999!220x220.png" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1185200033.html">  小米96GB+128GB</a>
+                <p>5.84"小水滴全面屏，后置1200万 A</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag flag-old">减 200 元</span><br>
+                <a href="https://item.mi.com/1185100030.html"><img src="https://i1.mifile.cn/a1/pms_1537324004.08544830!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1185100030.html">  小米96GB+128GB</a>
+                <p>潮流镜面渐变色，2400万自拍旗舰</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag flag-old">享8折</span><br>
+                <a href="https://item.mi.com/1183600012.html"><img src="https://i1.mifile.cn/a1/pms_1527685277.65255600!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1183600012.html">  小米96GB+128GB</a>
+                <p>三星 AMOLED 全面屏，骁龙710</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag ">新品</span><br>
+                <a href="https://item.mi.com/1191100012.html"><img src="https://i1.mifile.cn/a1/pms_1552805583.57297897!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1191100012.html">  小米96GB+128GB</a>
+                <p>骁龙855 旗舰配置 极速响应</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag " ></span><br>
+                <a href="https://item.mi.com/product/10000123.html"><img src="" ></a>
+                <br>
+                <a href="https://item.mi.com/product/10000123.html">  小米96GB+128GB</a>
+                <p></p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag " ></span><br>
+                <a href="https://item.mi.com/product/10000123.html"><img src=""></a>
+                <br>
+                <a href="https://item.mi.com/product/10000123.html">  小米96GB+128GB</a>
+                <p></p><br>
+                <span class="num">2999元</span>
+               </li>
+        </ul>
+    </div>
+    <div class="conter">
+        <ul>
+            <li>
+                <span class="flag flag-new">新品</span><br>
+                <a href="https://item.mi.com/1190800033.html"><img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1190800033.html">  小米96GB+128GB</a>
+                <p>骁龙855，索尼4800万超广角微距三摄</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag ">新品</span><br>
+                <a href="https://www.mi.com/mi8ud/"><img src="https://i1.mifile.cn/a1/pms_1538019009.57772743!220x220.png" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://www.mi.com/mi8ud/">  小米96GB+128GB</a>
+                <p>全球首款压感屏幕指纹 骁龙845处理器</p><br>
+                <span class="num">2499元 <span> 2999元</span></span>
+            </li>
+            <li>
+                <span class="flag flag-new">新品</span><br>
+                <a href="https://item.mi.com/1185200033.html"><img src="https://i1.mifile.cn/a1/pms_1547020852.30751177!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1185200033.html">  小米96GB+128GB</a>
+                <p>4800万拍照千元机，18个月超长质保</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag flag-new">新品</span><br>
+                <a href="https://item.mi.com/1185200033.html"><img src="https://i1.mifile.cn/a1/pms_1545457719.47232999!220x220.png" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1185200033.html">  小米96GB+128GB</a>
+                <p>5.84"小水滴全面屏，后置1200万 A</p><br>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag flag-old">减 200 元</span><br>
+                <a href="https://item.mi.com/1185100030.html"><img src="https://i1.mifile.cn/a1/pms_1537324004.08544830!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1185100030.html">  小米96GB+128GB</a>
+                <p>潮流镜面渐变色，2400万自拍旗舰</p>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag flag-old">享8折</span><br>
+                <a href="https://item.mi.com/1183600012.html"><img src="https://i1.mifile.cn/a1/pms_1527685277.65255600!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1183600012.html">  小米96GB+128GB</a>
+                <p>三星 AMOLED 全面屏，骁龙710</p>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag ">新品</span><br>
+                <a href="https://item.mi.com/1191100012.html"><img src="https://i1.mifile.cn/a1/pms_1552805583.57297897!220x220.jpg" width="160px" height="160px" alt=""></a>
+                <br>
+                <a href="https://item.mi.com/1191100012.html">  小米96GB+128GB</a>
+                <p>骁龙855 旗舰配置 极速响应</p>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag " ></span><br>
+                <a href="https://item.mi.com/product/10000123.html"><img alt=""></a>
+                <br>
+                <a href="https://item.mi.com/product/10000123.html">  小米96GB+128GB</a>
+                <p></p>
+                <span class="num">2999元</span>
+            </li>
+            <li>
+                <span class="flag " ></span><br>
+                <a href="https://item.mi.com/product/10000123.html"><img src=""></a>
+                <br>
+                <a href="https://item.mi.com/product/10000123.html">  小米96GB+128GB</a>
+                <p></p>
+                <span class="num">2999元</span>
+               </li>
+        </ul>
+    </div>
+
+</div>
+</div>
+
 </body>
 </html>
