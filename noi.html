@@ -152,9 +152,162 @@
        console.log("odd")
    }else console.log("even")
 </script>
-<script id="ch0104/04" type="">
+<script id="ch0104/04" type="x">
     var n=prompt("任意输入一个字符")
     if (n.charCodeAt() % 2 == 1) {
         console.log("YES")
     }else console.log("NO")
+</script>
+<script id="ch0104/05" type="x">
+    var x=Number(prompt("整数X"))
+    var y=Number(prompt("整数Y"))
+    if (x>y) {
+        console.log(">")
+    }else if (x==y) {
+        console.log("=")
+    }else console.log("<")
+</script>
+<script id="ch0104/06" type="x">
+    var x=Number(prompt("输入一个正整数"))
+    if (10 <=x&&x < 100 ) {
+        console.log("1")
+    }else console.log("0")
+</script>
+<script id="ch0104/07" type="x">
+    var lucky=Number(prompt("你有几个幸运瓶盖？"))
+    var encourage=Number(prompt("你有几个鼓励瓶盖？"))
+    if (lucky >= 10 || encourage >=20) {
+        console.log("1")
+    }else console.log("0")
+</script>
+<script id="ch0104/08" type="x">
+    var n=Number(prompt("判断该数能否同时被3和5整除"))
+    if (n % 3==0 && n % 5==0 ) {
+        console.log("YES")
+    }else console.log("NO")
+</script>
+<script id="ch0104/09" type="x">
+    var a=Number(prompt("一个整数"))
+    if (a%105==0) {
+        console.log("3 5 7")
+    }else if (a%15==0) {
+        console.log("3 5")
+    }else if(a%21==0){
+        console.log("3 7")
+    }else if (a%3==0) {
+        console.log("3")
+    }else if (a%5==0) {
+        console.log("5")
+    }else if (a%7==0) {
+        console.log("7")
+    }else console.log("n")
+</script>
+<script id="ch0104/10" type="x">
+    var a=Number(prompt("语文成绩"))
+    var b=Number(prompt("数学成绩"))
+    if ((a < 60 && b >= 60)||(a>= 60&&b<60)) {
+        console.log("1")        
+    } else console.log("0")
+</script>
+<script id="ch0104/11" type="x">
+    var day=Number(prompt("用数字1到7表示从星期一到星期日。"))
+    if (day==1||day==3||day==5) {
+        console.log("NO")
+    } else console.log("YES")
+</script>
+<script id="ch0104/12" type="x">
+    var distance=Number(prompt("一次办事要行走的距离"))
+    var bike=50+distance/3
+    var walk=distance/1.2
+    if (bike > walk) {
+        console.log("Walk")
+    }else if (bike < walk) {
+        console.log("Bike")
+    }else if (bike ==walk) {
+        console.log("All")
+    }
+</script>
+<script id="ch0104/13" type="x">
+    var x=Number(prompt("请输入一个浮点数"))
+    if (0 <= x && x < 5 ) {
+        console.log((-x + 2.5).toFixed(3))        
+    }else if (5 <= x && x < 10 ) {
+        console.log((2-1.5*(x - 3)*(x - 3)).toFixed(3))
+    }else console.log((x / 2 - 1.5).toFixed(3))
+</script>
+<script id="ch0104/14" type="x">
+    var weight=Number(prompt("重量g"))
+    var Urgent=prompt("是否加急")
+    if(Urgent == "y"){
+        if (weight <= 1000) {
+            console.log(8+5)
+        }else console.log(Math.ceil((weight-1000)/500)*4+8+5)
+    }else if (Urgent == "n") {
+        if (weight <= 1000) {
+            console.log(8)
+        }else console.log(Math.ceil((weight-1000)/500)*4+8)
+    }  
+</script>
+<script id="ch0104/15" type="x">
+    var a=Number(prompt("第一个整数"))
+    var b=Number(prompt("第二个整数"))
+    var c=Number(prompt("第三个整数"))
+    console.log(Math.max(a,b,c))
+</script>
+<script id="ch0104/16" type="x">
+    var a=Number(prompt("长度a"))
+    var b=Number(prompt("长度b"))
+    var c=Number(prompt("长度c"))
+     if (a+b >c&&a+c>b&&b+c>a) {
+         console.log("yes")
+     }else console.log("no")    
+</script>
+<script id="ch0104/17" type="x">
+    var year =Number(prompt("输入一个年份小于3000"))
+    console.log(year % 4 == 0 && year % 100 !==0 ||year % 400 ==0? "Y" : "N")
+</script>
+<script id="ch0104/18" type="x">
+    var x=Number(prompt("坐标x"))
+    var y=Number(prompt("坐标y"))
+    if (Math.abs(x)>1 || Math.abs(y)>1) {
+        console.log("no")
+    }else console.log("yes")
+</script>
+<script id="ch0104/19" type="x">
+    var a=Number(prompt("第1个参数"))
+    var b=Number(prompt("第2个参数"))
+    var x=prompt("+ - * /")
+    if (a == 0 && x =="/") {
+        console.log("Divided by zero!")
+    }else if (x=="+") {
+        console.log(a + b)
+    }else if (x=="-") {
+        console.log(a - b)
+    }else if (x=="*") {
+        console.log(a * b)
+    }else if (x=="/") {
+        console.log(a / b)
+    }else console.log("Invalid operator")
+</script>
+<script id="ch0104/20" type="x">
+    var a=Number(prompt("a"))
+    var b=Number(prompt("b"))
+    var c=Number(prompt("c"))
+    var x1=(-b + Math.sqrt(b*b-4*a*c)) / (2 * a)
+    var x2=(-b - Math.sqrt(b*b-4*a*c)) / (2 * a)
+    var shi= - b / (2*a)
+    var xu = Math.sqrt(4 * a * c -b * b) / (2 * a)
+    if (b * b == 4 * a * c) {
+        console.log("x1=x2=" + x1.toFixed(5))
+    }else if ((b * b > 4 * a * c) && x1 > x2 ){
+       console.log("x1=" + x1.toFixed(5) + ";" + "x2=" + x2.toFixed(5)) 
+    }else if ((b * b < 4 * a * c)) {   
+        console.log("x1=" + shi.toFixed(5) +  "+" + xu.toFixed(5) + "i" +";"+"x2=" + shi.toFixed(5) +  "-" + xu.toFixed(5) + "i")    
+    }
+</script>
+<script id="ch0104/21" type="">
+    var n=Number(prompt("苹果数"))
+    var x=Number(prompt("虫子吃一个苹果的时间小时"))
+    var y=Number(prompt("经过多长时间"))
+    console.log(n- Math.ceil(y/x))
 </script>
