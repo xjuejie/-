@@ -37,11 +37,11 @@
 </script>
 
 <script id="ch0103/07" type="x">
+    var x = Number(prompt("pick a number"))
      var a = Number(prompt("pick a number"))
      var b = Number(prompt("pick a number"))
      var c = Number(prompt("pick a number"))
      var d = Number(prompt("pick a number"))
-     var x = Number(prompt("pick a number"))
      var fx = Number(a * x * x * x + b * x * x  + c * x + d)
      console.log(fx.toFixed(7) )
 </script>
@@ -57,8 +57,9 @@
 <script id="ch0103/09" type="x">
     var r =Number(prompt("0 < r <= 10,000"))
     var d= 2*r
-    var round =Math.PI *d
-    var square = Math.PI *r*r
+    var pi =3.14159
+    var round =pi *d
+    var square = pi *r*r
     console.log(d.toFixed(4))
     console.log(round.toFixed(4))
     console.log(square.toFixed(4))
@@ -66,7 +67,7 @@
 <script id="ch0103/10" type="x">
      var r1 =Number(prompt("这是电阻1"))
      var r2 =Number(prompt("这是电阻2"))
-     var R =Number(1/r1 + 1/r2)
+     var R =Number(1/(1/r1 + 1/r2))
      console.log(R.toFixed(2))
 </script>
 <script id="ch0103/11" type="x">
@@ -74,11 +75,11 @@
     var b=Number(prompt("双精度浮点数"))
     var k= a/b | 0 
     var r= a - k*b
-    console.log(r)
+    console.log(r.toFixed(4))
 </script>
 <script id="ch0103/12" type="x">
     var r=Number(prompt("请输入半径"))
-    var V= 4 / 3 * Math.PI*r*r*r
+    var V= 4 / 3 * 3.14*r*r*r
     console.log(V.toFixed(2))
 </script>
 <script id="ch0103/13" type="x">
@@ -148,8 +149,8 @@
 <script id="ch0104/03" type="x">
    var n=Number(prompt("给定一个整数")) 
    if (n%2 == 1) {
-       console.log("even")
-   }else console.log("odd")
+       console.log("odd")
+   }else console.log("even")
 </script>
 <script id="ch0104/04" type="">
     var n=prompt("任意输入一个字符")
