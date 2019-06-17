@@ -305,9 +305,345 @@
         console.log("x1=" + shi.toFixed(5) +  "+" + xu.toFixed(5) + "i" +";"+"x2=" + shi.toFixed(5) +  "-" + xu.toFixed(5) + "i")    
     }
 </script>
-<script id="ch0104/21" type="">
+<script id="ch0104/21" type="x">
     var n=Number(prompt("苹果数"))
     var x=Number(prompt("虫子吃一个苹果的时间小时"))
     var y=Number(prompt("经过多长时间"))
     console.log(n- Math.ceil(y/x))
+</script>
+<script id="ch0105/01" type="x">
+    var n=Number(prompt("学生数量"))
+    var sum=0
+    for (let i = 0; i < n; i++) {
+        sum += Number(prompt("学生年龄"))   
+    } 
+    console.log((sum/n).toFixed(2))   
+</script>
+<script id="ch0105/02" type="x">
+    var sum=0
+    for (let i = 0; i < 12; i++) {
+        sum += Number(prompt("月结余"))    
+    }
+    console.log("$" + (sum / 12).toFixed(2))
+</script>
+<script id="ch0105/03" type="x">
+    var n=Number(prompt("样本容量"))
+    var sum=0
+    for (let i = 0; i < n ;i++) {
+        sum+=Number(prompt("样本数据"))
+    }
+    console.log((sum/n).toFixed(4))
+</script>
+<script id="ch0105/04" type="x">
+    var n= Number(prompt("整数数量"))
+    var sum= 0
+    for (let i = 0 ; i < n ; i++){
+        sum += Number(prompt("整数"))
+    }
+    console.log(sum + " "+(sum/n).toFixed(5))
+</script>
+<script id="ch0105/05" type="x">
+    var n= Number(prompt("整数数量"))
+    var max=0
+    for (var i = 0 ; i < n; i++){
+        var x = Number(prompt("整数"));
+        max = (max > x ? max:x)
+    }
+    console.log(max)   
+</script>
+<script id="ch0105/06" type="x" >
+    var n= Number(prompt("整数数量"))
+    var max = 0
+    var min = 0
+    for (var i = 0 ; i < n; i++){
+        var x = Number(prompt("整数"));
+        max = (max > x ? max : x)
+        min = (min < x ? min : x)
+    }
+    console.log(max - min)   
+</script>
+<script id="ch0105/07" type="x" >
+    var day =Number(prompt("决赛项目天数"))
+    var jin = 0
+    var yin = 0
+    var tong = 0
+    for( var i = 0;i < day; i++){
+        jin += Number(prompt("当天天金牌数"))
+        yin += Number(prompt("当天天银牌数"))
+        tong += Number(prompt("当天天银牌数"))
+    } console.log(jin,yin,tong,(jin + yin + tong))
+</script>
+<script id="ch0105/08" type="x" >
+    var n = Number(prompt("输入该多边形为几边形"))
+    var deg = 0
+    for ( var i = 1 ;i < n ; i++){
+        deg += Number(prompt("其中一个角度数"))
+    } console.log((n-2) * 180 - deg)
+     
+</script>
+<script id="ch0105/09" type="x" >
+    var m = Number(prompt("第一个数"))
+    var n = Number(prompt("第二个数"))
+    var x = 0
+    for (var i = m; i <= n ;i++ ){
+       if (i % 2 == 1) {
+             x += i;  
+       } 
+    }
+    console.log(x)
+</script>
+<script id="ch0105/10" type="x" >
+    var m = Number(prompt("第一个数"))
+    var n = Number(prompt("第二个数"))
+    var x = 0
+    for ( var i = m; i <= n ;i++){
+        if (i % 17 ==0 ) {
+            x += i
+        }
+    }
+    console.log(x)
+</script>
+<script id="ch0105/11" type="x" >
+    var k = Number(prompt("包含几个正整数"))
+    var one = 0
+    var five = 0
+    var ten = 0
+    for(var i = 0;i < k;i++ ){
+        var x = Number(prompt("正整数"))
+        if (x == 1) {
+            one++ 
+        }else if (x == 5) {
+            five++
+        }else if (x == 10)  
+            ten++ 
+     }
+     console.log(one)
+     console.log(five)
+     console.log(ten)
+</script>
+<script id="ch0105/12" type="x" >
+    var n = Number(prompt("整数序列的长度"))
+    var m = Number(prompt("指定的数字"))
+    var a = 0
+    for(var i = 0;i < n;i++){
+        var N=Number(prompt("整数"))
+        if (m == N) {
+            a++
+        }
+    }
+    console.log(a)
+
+</script>
+<script id="ch0105/13" type="x" >
+    var a = Number(prompt("一个整数"))
+    var n = Number(prompt("乘方"))
+    var x = 1
+    for(i = 0 ; i < n ; i++){
+        x = x * a
+    } 
+    console.log(x)
+</script>
+<script id="ch0105/14" type="x" >
+    var x = Number(prompt("我国现有多少亿人口"))
+    var n = Number(prompt("经过多少年"))
+    var a = 0
+    var z = 1
+    for(i = 0; i < n ;i++){
+        z = 1.001 * z
+    } 
+    console.log((x * z).toFixed(4))
+</script>
+<script id="ch0105/15" type="x" >
+    var R = Number(prompt("年利率"))
+    var M = Number(prompt("投资本金"))
+    var Y = Number(prompt("投资年数"))
+    var z = 1
+    for (i = 0 ; i < Y; i++){
+        z = ((100 + R)/100) * z
+    }
+    console.log(parseInt(M * z))
+</script>
+<script id="ch0105/16" type="x" >
+    var N =Number(prompt("年薪"))
+    var K =Number(prompt("年增长率"))
+    var z = 0
+    var y = 0
+    for( i= 1 ; ;i++){
+        z = z + ((K/100) * 200)
+        y = y + N
+        if (y > (z + 200 )) {
+            break;
+        }
+    }
+   if ((i + 1) >= 20) {
+       console.log("Impossible")
+   } else console.log(i + 1)
+</script>
+<script id="ch0105/17" type="x" >
+    var k = Number(prompt("第多少个数"))
+    var x = [ ]
+    x[0] = 1,x[1] = 1
+    for(i = 2;i < k; i++){
+        x[i] = x[i-1] + x[i-2] 
+        var y = x[i]
+    } console.log(y)
+</script>
+<script id="ch0105/18" type="x" >
+    var n =Number(prompt("共有多少组"))
+    var j = Number(prompt("鸡尾酒临床数"))
+    var w =Number(prompt("鸡尾酒有效数"))
+    var jw = w / j
+    for(i = 1 ; i < n ; i++){
+        var x = Number(prompt("改进临床数"))
+        var y = Number(prompt("改进有效数"))
+        if ((jw - (y / x)) > 0.05) {
+            console.log("worse")
+        }else if ((jw - (y / x)) < -0.05) {
+            console.log("better")
+        }else console.log("same")
+    }
+</script>
+<script id="ch0105/19" type="x" >
+    var roof = Number(prompt("屋顶数量"))
+    var time = 0
+    for (i = 0 ; i < roof ; i++){
+        var x = Number(prompt("x坐标"))
+        var y = Number(prompt("y坐标"))
+        var num = Number(prompt("屋顶人数"))
+        time += (2 * (Math.sqrt(x * x + y * y)) / 50) + num * 1.5
+    } console.log(Math.ceil(time))
+
+</script>
+<script id="ch0105/20" type="x" >
+    var h= Number(prompt("初始高度"))
+    var run = 0
+    for(i = 0 ; i < 10 ; i++){
+        run =run + h + 0.5 * h
+        h = h * 0.5   
+    } 
+    console.log((run - h).toFixed(4))
+    console.log(h.toFixed(7))
+</script>
+<script id="ch0105/21" type="x" >
+    var N = Number(prompt("一个整数"))
+    for (i = 0 ; ;i++ ){
+        if (N == 1) {
+            console.log("End")
+            break;
+        }else if (N % 2 ==1) {
+            N = N * 3 + 1
+            console.log("5*3+1=" + N)
+        }else if (N % 2 == 0) {
+            N = N / 2
+            console.log(2 * N + "/2=" + N)
+        }
+    }
+</script>
+<script id="ch0105/22" type="x" >
+    // debugger
+    var over = 0 //每个月存完的余额
+    var deposit = 0//存款
+    var stay = 0 // 每个月300减去支出
+    for (i= 1 ;i <= 12; i++){
+        outlay = Number(prompt("支出"))
+        stay = 300- outlay + over
+        over =  stay
+        if ((over >= 100)&&(over < 200) ) {
+              over = over % 100
+             deposit = deposit +100
+            } else if (( over >= 200)&& over < 300){
+                over = over % 100
+                deposit = deposit + 200
+            } else if (over >= 300) {
+                    over = over % 100
+                    deposit = deposit + 300
+            } else if ((over + 300) < 300 ) {
+            
+            break;
+        }
+    }
+    if ((over + 300) < outlay) {
+        console.log(-i)
+    }else console.log(deposit * 1.2 + over)
+</script>
+<script id="ch0105/23" type="x" >
+    var m = Number(prompt("药品总量"))
+    var n = Number(prompt("取药人数"))
+    var x = 0 //剩余药量
+    for (i = 1 ; i <= n; i++ ){
+        var num = Number(prompt( i +"取药数量"))
+         m = m - num
+         if (m < num) {
+             x++
+         }
+    } console.log(n - x)
+</script>
+<script id="ch0105/24" type="x" >
+    var n = Number(prompt("测量次数"))
+    var x = 0
+    for ( i = 1 ; i <= n;i++){
+        var sou =Number(prompt("收缩压"))
+        var zhang =Number(prompt("舒张压"))
+        if (sou >= 90 && sou <=140 &&zhang >= 60 &&zhang <=90 ) {
+            x++
+        }
+    } console.log(x - 1)
+</script>
+<script id="ch0105/25" type="x" >
+    for( i = 0; i <= 511; i++){
+        q = i.toString(7)
+        j = i.toString(9)
+        var fq = q.split("").reverse().join("");
+
+        if ((fq == j)&&i >= 64 ) {
+          console.log(i) 
+          console.log(q) 
+          console.log(j)
+        }
+    }
+</script>
+<script id="ch0105/26" type="" >
+
+</script>
+<script id="ch0105/27" type="" >
+
+</script>
+<script id="ch0105/28" type="" >
+
+</script>
+<script id="ch0105/29" type="" >
+
+</script>
+<script id="ch0105/30" type="" >
+
+</script>
+<script id="ch0105/31" type="" >
+
+</script>
+<script id="ch0105/32" type="" >
+
+</script>
+<script id="ch0105/33" type="" >
+
+</script>
+<script id="ch0105/34" type="" >
+
+</script>
+<script id="ch0105/35" type="" >
+
+</script>
+<script id="ch0105/36" type="" >
+
+</script>
+<script id="ch0105/37" type="" >
+
+</script>
+<script id="ch0105/38" type="" >
+
+</script>
+<script id="ch0105/39" type="" >
+
+</script>
+<script id="ch0105/40" type="" >
+
 </script>
