@@ -647,7 +647,7 @@
     var m = Number(prompt("1 < m < 100000"))
     var k = Number(prompt("1 < k < 5"))
     var x = 0
-        debugger
+        //debugger
         if (m % 19 !== 0) {
             console.log("NO")
       }else
@@ -805,6 +805,20 @@
         }
     }
 </script>
+<script id="ch0105/45" type="x">
+    var n = Number(prompt("天数"))
+    var give = 1
+    var sum = 0
+    for(var i = 0, j = 0; i < n; j++, i++) {
+    if (j == give) {
+        j = 0
+        give++
+    }
+    sum += give
+}
+console.log(sum)
+
+</script>
 <script id="7" type="x">
     var n = Number(prompt("输入一个值"))
      if (n % 10 == 7 || n % 7 ==0){
@@ -830,7 +844,7 @@
     }else console.log("NO")
 </script>
 <script id="narcissistics" type="x">
-    for (i = 1 ;i < 1000 ;i++){
+    for (i = 100 ;i < 1000 ;i++){
       var g = i % 10
       var s = Math.floor((i /10) % 10 )
       var b = Math.floor((i /100) % 10 )
