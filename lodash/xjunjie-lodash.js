@@ -124,7 +124,7 @@ filer: function(ary,predicate){
       }
     }
     return true
-
+  }
 
 
 
